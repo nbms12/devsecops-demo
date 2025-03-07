@@ -1,3 +1,8 @@
+
+NOTE : ALL THIS PROEJJCT CODES / SAMPLES / DATA ARE FORKED FROM   iam-veeramalla/devsecops-demo ( OWNER ) . ALL CREDITS GOES TO HIM . I AM JUST ADDING IMPORTANT STEPS TO MAKE UNDERSTAND MYSELF THE  PROCESS OF IMPLEMETING THIS DEVSECOPS PROJECT. 
+
+THANKS TO ALL DEVOPS COMMUNITY AND LEARNERS.
+
 steps: 
 
 
@@ -20,5 +25,13 @@ steps:
 
 7.Analyse github actions yml file ( ci-cd.yml ) , we must generate classic tokens and use them as secrets in specific any  projects 
 here we use into this project to store our image in ghcr ( github container registry ) .
+
+
+settings >devloper settings >  personal access token > classic token > 
+
+![image](https://github.com/user-attachments/assets/86f9832b-8d1e-42b3-b69e-2be042e75e99)
+
+
+8. under tis project add env secret 
 
 
