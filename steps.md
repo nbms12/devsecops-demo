@@ -116,4 +116,7 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 26 . verify github actions CI/CD pipeline 
 
 
+![image](https://github.com/user-attachments/assets/eed512e9-9e2a-4820-8dd8-47c9decbb75f)
+
+
 
