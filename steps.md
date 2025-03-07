@@ -32,6 +32,21 @@ settings >devloper settings >  personal access token > classic token >
 ![image](https://github.com/user-attachments/assets/86f9832b-8d1e-42b3-b69e-2be042e75e99)
 
 
-8. under tis project add env secret 
+8. under tis project add env secret, add same token value earlier created.
+
+   ![image](https://github.com/user-attachments/assets/d23d58b0-9500-4aab-b31f-1a93ece12280)
 
 
+9. docker login ghcr.io  ( login ghcr , password as token )
+
+10. once pipeline is finished executing all jobs we can verify two images will be present .> local one and ghcr generated one.
+
+11. Launch EC2 instance of type t2.medium/large with size of 25gb ( as we require for cluster , docker setup , argoCD )
+
+12. instaall docker
+
+13. run docker image on instance with desired port number an with ghcr generated image
+
+14. open app with public ip ( check security group inbound rules for access )
+
+15. 
