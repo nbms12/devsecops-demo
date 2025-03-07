@@ -120,3 +120,9 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 
 
 
+27. port forward one of replica pod and verify the app changes
+
+kubectl port-forward tic-tac-toe-5744bc7d58 -p 5534:80  --address 0.0.0.0
+
+
+![image](https://github.com/user-attachments/assets/92155574-438e-451f-a7b7-1845379f495d)
