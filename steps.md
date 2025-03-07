@@ -96,3 +96,24 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 21. port forward argocd-server to some port number
 
     kubectl port-forward svc/argocd-server 9000:80 -n argocd --address 0.0.0.0
+
+
+23. retrieve password for argocd
+
+    kubectl edit secret argocd-initial-admin-secret -n argocd
+
+    decode value  base64 to get actual password ( username is admin  )
+
+
+24 . login argocd UI and create app 
+
+25 . Verify changes in application as continously image tag is also changes as github actions is triggred
+
+
+![image](https://github.com/user-attachments/assets/a3d1b9a2-4d3b-480f-9931-624afc93c061)
+
+
+26 . verify github actions CI/CD pipeline 
+
+
+
