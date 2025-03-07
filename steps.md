@@ -49,4 +49,46 @@ settings >devloper settings >  personal access token > classic token >
 
 14. open app with public ip ( check security group inbound rules for access )
 
-15. 
+15. login  ghcr > docker login ghcr.io ( usernamme and pwd as token value )
+
+16. install kind ( tool for running local Kubernetes clusters using Docker container nodes )
+
+    
+[
+    # For AMD64 / x86_64
+[ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.27.0/kind-linux-amd64
+# For ARM64
+[ $(uname -m) = aarch64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.27.0/kind-linux-arm64
+chmod +x ./kind
+sudo mv ./kind /usr/local/bin/kind
+
+
+]
+
+
+17. create cluster > kind create cluster --name= qa-cluster-demo
+
+18. install kubectl
+
+
+     18.1   Install kubectl binary with curl on Linux
+
+      curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+
+
+     18.2   sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+
+
+
+19.  Install Argo CD
+    
+
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+
+20. kubectl get svc -n argocd
+
+21. port forward argocd-server to some port number
+
+    kubectl port-forward svc/argocd-server 9000:80 -n argocd --address 0.0.0.0
